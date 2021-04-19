@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 align="center">RESERVA</h1>
+
+<!--cuadro de informacion-->
+<form action="/comprobar" method="POST">
+    <div class="col-md-3 mb-3">
+        <label for="validationCustom04">Tipo de documento</label>
+        <select class="custom-select" id="validationCustom04" required>
+          <option selected disabled value="">Seleccione documento</option>
+          <option>Cédula de ciudadanía</option>
+          <option>Pasaporte</option>
+          <option>Cédula de extranjería</option>
+        </select>
+        <div class="invalid-feedback">
+          Selecciona un tipo de documento válido.
+        </div>
+    </div>
+    <p><input type="text" name="identificacion" placeholder="Número de Identifiación"></p>
+    <p><input type="text" name="nombre" placeholder="Nombre completo"></p>
+    <p><input type="text" name="telefono" placeholder="Telefono"></p>
+    <p><input type="text" name="email" placeholder="Email"></p>
+    <div style="text-align: center;">
+      <p><button type="submit" class="btn btn-primary">
+        Guardar
+      </button></p>
+    </div>
+</form>
+
+
+<!-- Button trigger modal -->
+<div style="text-align: center;">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Borar información
+    </button>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Hotel el Descanso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Estas seguro que deseas borrar la información?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a class="btn btn-primary" href="/reserva">Confirmar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    $('#myModal').modal(options)
+</script>
+
+{% endblock %}

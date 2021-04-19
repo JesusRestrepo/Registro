@@ -1,0 +1,54 @@
+body {
+    margin: 20px;
+    margin-bottom:0px;
+}
+
+html{
+    min-height: 100%;
+    background-size: cover;
+}
+
+footer {
+    margin-bottom: 0px;
+    margin-top: 10%;
+    bottom: 0%;
+    color: white;
+}
+
+.container{
+    background-color: white;
+    color: black;
+    padding: 30px;
+    text-align: justify;
+}
+
+.content{
+    background-color: white;
+    color: black;
+    padding: 30px;
+    column-count: 2;
+    text-align: justify;
+}
+
+.muestra1{
+    margin: 3px;
+    padding: 3px;
+}
+
+.jumbotron{
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+.carousel-caption{
+    color: black
+}
+
+.media{
+    margin: 15px;
+    border: black 2px solid;
+}
+
+.mt-0{
+    text-align: center;
+}
