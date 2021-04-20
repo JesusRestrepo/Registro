@@ -1,7 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 
 app=Flask(__name__)
+
+#conexion base de datos
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Jesus-Restrepo.2003'
@@ -43,6 +45,10 @@ def sencilla():
 @app.route('/habitacion/suite-especial/5-estrellas')
 def suite():
     return render_template('suite.html')
+
+@app.route('/habitacion/doble-cama')
+def double():
+    return render_template('doblecama.html')
 
 @app.route('/comprobar', methods=['POST'])
 def comprobar():
