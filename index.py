@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 
+#conexion con base de datos
 app=Flask(__name__)
 
 #conexion base de datos
