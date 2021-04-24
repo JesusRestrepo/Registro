@@ -1,14 +1,13 @@
-body {
-    margin: 20%;
-    margin-bottom:0px;
-}
-
 html{
     width: 100%;
     background-size: cover;
 }
 
 .navbar{
+    width: 100%;
+}
+
+header{
     width: 100%;
 }
 
