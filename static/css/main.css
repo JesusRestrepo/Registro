@@ -7,8 +7,17 @@ html{
     width: 100%;
 }
 
+body{
+    margin-top: 80px;
+}
+
 header{
     width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
 }
 
 footer {
@@ -58,6 +67,10 @@ footer {
     border: black 2px solid;
 }
 
+.mr-3{
+    width: 60%;
+}
+
 .mt-0{
     text-align: center;
 }
@@ -76,4 +89,38 @@ footer {
 
 .col-md-3{
     text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    .jumbotron{
+        width: 100%;
+    }
+    .display-4{
+        font-size: 3em;
+    }
+    .lead{
+        font-size: medium;
+    }
+    .my-4{
+        font-size: small;
+    }
+
+    .carousel-caption{
+        width: 80%;
+    }
+    .carouselExampleIndicators{
+        width: 80%;
+    }
+
+    .media{
+        width: 60%;
+    }
+
+    .media-body{
+        width: 30%;
+        font-size: 1em;
+    }
+
+    
 }
