@@ -91,7 +91,7 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 200px){
 
     .jumbotron{
         width: 100%;
