@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from flask_mysqldb import MySQL
 from conexion import mysql
 
 app=Flask(__name__)
@@ -56,4 +55,3 @@ def comprobar():
         (identificacion, nombre, telefono, email))
         mysql.connection.commit()
         return render_template('comprobar.html')
-
