@@ -61,7 +61,7 @@ footer {
 }
 
 .media{
-    width: 100%;
+    width: 90%;
     margin: 25px;
     box-sizing: border-box;
     border: black 2px solid;
@@ -91,7 +91,7 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) and (min-width: 300px) {
+@media screen and (max-width: 300px){
 
     .jumbotron{
         width: 100%;
@@ -115,12 +115,20 @@ footer {
 
     .media{
         width: 60%;
+        text-align: center;
     }
 
     .media-body{
         width: 30%;
         font-size: 1em;
     }
+
+    .mr-3{
+        width: 70%;
+        position: absolute;
+    }
+
+
 
     
 }
