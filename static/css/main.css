@@ -8,7 +8,8 @@ html{
 }
 
 body{
-    margin-top: 80px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 header{
@@ -25,7 +26,6 @@ footer {
     margin-bottom: 0px;
     margin-top: 10%;
     bottom: 0%;
-    color: white;
 }
 
 .container{
@@ -60,18 +60,28 @@ footer {
     color: black
 }
 
-.media{
+.row{
     width: 90%;
     margin: 25px;
     box-sizing: border-box;
     border: black 2px solid;
 }
 
-.mr-3{
-    width: 60%;
+.card-img{
+    max-width: 100%;
+    padding-left: 5%;
 }
 
-.mt-0{
+.card-content{
+    width: 100%;
+    padding: 5%;
+}
+
+.card-action{
+    text-align: center;
+}
+
+.card-tittle{
     text-align: center;
 }
 
@@ -91,13 +101,13 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 200px){
+@media screen and (max-width: 100px){
 
     .jumbotron{
         width: 100%;
     }
     .display-4{
-        font-size: 3em;
+        font-size: 2em;
     }
     .lead{
         font-size: medium;
@@ -113,19 +123,14 @@ footer {
         width: 80%;
     }
 
-    .media{
+    .row{
         width: 60%;
         text-align: center;
     }
 
-    .media-body{
-        width: 30%;
-        font-size: 1em;
-    }
-
-    .mr-3{
-        width: 70%;
-        position: absolute;
+    .card-img{
+        max-width: 70%;
+        height: auto;
     }
 
 
