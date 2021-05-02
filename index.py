@@ -57,5 +57,5 @@ def comprobar():
         mysql.connection.commit()
         return render_template('comprobar.html')
 
-        if __name__ == '__main__':
-            app.run(debug=True)
+    if __name__ == '__main__':
+        app.run(debug=True)
