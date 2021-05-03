@@ -37,11 +37,8 @@ footer {
 }
 
 .content{
-    background-color: white;
-    color: black;
-    padding: 30px;
-    column-count: 2;
-    text-align: justify;
+    text-align: center;
+    width: 80%;
 }
 
 .muestra1{
@@ -101,13 +98,13 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 100px){
+@media screen and (max-width: 400px){
 
     .jumbotron{
         width: 100%;
     }
     .display-4{
-        font-size: 2em;
+        font-size: 1em;
     }
     .lead{
         font-size: medium;
@@ -118,9 +115,16 @@ footer {
 
     .carousel-caption{
         width: 80%;
+        height: auto;
     }
     .carouselExampleIndicators{
         width: 80%;
+        height: 150px;
+    }
+
+    .carousel-slide{
+        width: 80%;
+        height: 150px;
     }
 
     .row{
@@ -130,7 +134,11 @@ footer {
 
     .card-img{
         max-width: 70%;
-        height: auto;
+        height: 100%;
+    }
+
+    .content{
+        width: 100%;
     }
 
 
