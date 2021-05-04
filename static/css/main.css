@@ -58,7 +58,7 @@ footer {
 }
 
 .row{
-    width: 90%;
+    width: 100%;
     margin: 25px;
     box-sizing: border-box;
     border: black 2px solid;
@@ -104,7 +104,7 @@ footer {
         width: 100%;
     }
     .display-4{
-        font-size: 1em;
+        font-size: 2em;
     }
     .lead{
         font-size: medium;
@@ -133,8 +133,8 @@ footer {
     }
 
     .card-img{
-        max-width: 70%;
-        height: 100%;
+        width: 100%;
+        height: auto;
     }
 
     .content{
