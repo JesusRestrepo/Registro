@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Hotel</title>
+    <!--editaciones css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+    <!--icono pagina web-->
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/128/608/608912.png">
+</head>
+
+<body>
+    <div class="content">
+        <div style="text-align: center;">
+            <h1>Inicia sesion</h1>
+        </div>
+        <form action="/bienvenido-a-su-informacion-de-reserva" method="post">
+            <div class="info">
+                <p><input type="text" name="email" placeholder="Email"></p>
+                <p><input type="password" name="contraseña" placeholder="Contraseña"></p>
+            </div>
+            <div style="text-align: center;">
+                <p><button type="submit" class="btn btn-primary">
+                  Guardar
+                </button></p>
+              </div>
+        </form>       
+    </div>
+</body>
+
+

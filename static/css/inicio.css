@@ -1,0 +1,18 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/73/dd/19/73dd197d3f5a117998b592d2497d2205.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.content{
+    background-color: whitesmoke;
+    width: 40%;
+    height: 747px;
+    position: absolute;
+    text-align: right;
+}
+
+.info{
+    text-align: center;   
+}
+

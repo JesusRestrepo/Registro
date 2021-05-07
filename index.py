@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_mysqldb import MySQL
 
 app=Flask(__name__)
@@ -50,6 +50,14 @@ def suite():
 def double():
     return render_template('doblecama.html')
 
+@app.route('/iniciar-sesion/hotel-el-descanso', methods=["GET", "POST"])
+def iniciar():
+    return render_template('inicio.html')
+
+@app.route('/bienvenido-a-su-informacion-de-reserva', methods=['POST'])
+def bienvenido():
+    return render_template('bienvenido.html')
+
 @app.route('/comprobar', methods=['POST'])
 def comprobar():
     if request.method == 'POST':
@@ -57,9 +65,10 @@ def comprobar():
         nombre = request.form['nombre']
         telefono = request.form['telefono']
         email = request.form['email']
+        contraseña = request.form['contraseña']
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO informacion (identificacion, nombre, telefono, email) VALUES(%s, %s, %s, %s)', 
-        (identificacion, nombre, telefono, email))
+        cur.execute('INSERT INTO datos (identificacion, nombre, telefono, email, contraseña) VALUES(%s, %s, %s, %s, %s)', 
+        (identificacion, nombre, telefono, email, contraseña))
         mysql.connection.commit()
         return render_template('comprobar.html')
 
