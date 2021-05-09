@@ -65,10 +65,10 @@ def comprobar():
         nombre = request.form['nombre']
         telefono = request.form['telefono']
         email = request.form['email']
-        contraseña = request.form['contraseña']
+        #contraseña = request.form['contraseña']
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO datos (identificacion, nombre, telefono, email, contraseña) VALUES(%s, %s, %s, %s, %s)', 
-        (identificacion, nombre, telefono, email, contraseña))
+        cur.execute('INSERT INTO datos (identificacion, nombre, telefono, email) VALUES(%s, %s, %s, %s)', 
+        (identificacion, nombre, telefono, email))
         mysql.connection.commit()
         return render_template('comprobar.html')
 
