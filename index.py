@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request
+# -*- coding: UTF-8 -*-
+from flask import Flask, render_template, request, redirect, url_for
 from flask_mysqldb import MySQL
 
-#conexion con base de datos
 app=Flask(__name__)
 
 #conexion base de datos
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = '45.236.129.6'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Jesus-Restrepo.2003'
 app.config['MYSQL_DB'] = 'registro'
@@ -51,6 +51,14 @@ def suite():
 def double():
     return render_template('doblecama.html')
 
+@app.route('/iniciar-sesion/hotel-el-descanso', methods=["GET", "POST"])
+def iniciar():
+    return render_template('inicio.html')
+
+@app.route('/bienvenido-a-su-informacion-de-reserva', methods=['POST'])
+def bienvenido():
+    return render_template('bienvenido.html')
+
 @app.route('/comprobar', methods=['POST'])
 def comprobar():
     if request.method == 'POST':
@@ -58,12 +66,12 @@ def comprobar():
         nombre = request.form['nombre']
         telefono = request.form['telefono']
         email = request.form['email']
+        contrasena = request.form['contrasena']
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO informacion (identificacion, nombre, telefono, email) VALUES(%s, %s, %s, %s)', 
-        (identificacion, nombre, telefono, email))
+        cur.execute('INSERT INTO datos (identificacion, nombre, telefono, email, contrasena) VALUES(%s, %s, %s, %s, %s)', 
+        (identificacion, nombre, telefono, email, contrasena))
         mysql.connection.commit()
         return render_template('comprobar.html')
 
-if __name__ == '__main__':
-    app.run()
-    app.debug=True
+    if __name__ == '__main__':
+        app.run(debug=True)

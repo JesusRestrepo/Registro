@@ -3,6 +3,31 @@
 {% block content %}
 <h1 align="center">RESERVA</h1>
 
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"> Hotel el Descanso </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link" href="/"> Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/habitaciones"> Habitaciones </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contactenos"> Contáctenos </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sobre-nosotros"> Nosotros </a>
+        </li>
+      </ul>
+  </nav>
+</header>
+
 <!--cuadro de informacion-->
 <form action="/comprobar" method="POST">
     <div class="col-md-3 mb-3">
@@ -21,10 +46,11 @@
     <p><input type="text" name="nombre" placeholder="Nombre completo"></p>
     <p><input type="text" name="telefono" placeholder="Telefono"></p>
     <p><input type="text" name="email" placeholder="Email"></p>
+    <p><input type="password" name="contrasena" placeholder="Contraseña"></p>
     <div style="text-align: center;">
-      <p><button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary">
         Guardar
-      </button></p>
+      </button>
     </div>
 </form>
 

@@ -1,21 +1,35 @@
-body {
-    margin: 20px;
-    margin-bottom:0px;
-}
-
 html{
-    min-height: 100%;
+    width: 100%;
     background-size: cover;
 }
 
+.navbar{
+    width: 100%;
+}
+
+body{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
 footer {
+    width: 100%;
     margin-bottom: 0px;
     margin-top: 10%;
     bottom: 0%;
-    color: white;
 }
 
 .container{
+    width: 100%;
     background-color: white;
     color: black;
     padding: 30px;
@@ -23,11 +37,8 @@ footer {
 }
 
 .content{
-    background-color: white;
-    color: black;
-    padding: 30px;
-    column-count: 2;
-    text-align: justify;
+    text-align: center;
+    width: 80%;
 }
 
 .muestra1{
@@ -36,19 +47,104 @@ footer {
 }
 
 .jumbotron{
+    width: 100%;
     background-color: whitesmoke;
     padding: 30px;
+    box-sizing: border-box;
 }
 
 .carousel-caption{
     color: black
 }
 
-.media{
+.row{
+    width: 100%;
     margin: 25px;
+    box-sizing: border-box;
     border: black 2px solid;
 }
 
-.mt-0{
+.card-img{
+    max-width: 100%;
+    padding-left: 5%;
+}
+
+.card-content{
+    width: 100%;
+    padding: 5%;
+}
+
+.card-action{
     text-align: center;
+}
+
+.card-tittle{
+    text-align: center;
+}
+
+.carouselExampleIndicators{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+}
+
+.info{
+    width: 100%;
+}
+
+.col-md-3{
+    text-align: center;
+}
+
+@media screen and (max-width: 400px){
+
+    .jumbotron{
+        width: 100%;
+    }
+    .display-4{
+        font-size: 2em;
+    }
+    .lead{
+        font-size: medium;
+    }
+    .my-4{
+        font-size: small;
+    }
+
+    .carousel-caption{
+        width: 80%;
+        height: auto;
+    }
+    .carouselExampleIndicators{
+        width: 80%;
+        height: 150px;
+    }
+
+    .carousel-slide{
+        width: 80%;
+        height: 150px;
+    }
+
+    .row{
+        width: 85%;
+        text-align: center;
+    }
+
+    .card-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .card-content{
+        width: 100%;
+        text-align: justify;
+    }
+
+    
 }
